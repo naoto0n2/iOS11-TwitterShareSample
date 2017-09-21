@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="Mhh-qm-pDp">
+            <objects>
+                <viewController storyboardIdentifier="AccountViewController" id="exw-P9-QcN" customClass="AccountViewController" customModule="TwitterShareSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GPa-pw-8go">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I8i-FQ-Uej">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="exw-P9-QcN" id="sp3-w1-XHa"/>
+                                    <outlet property="delegate" destination="exw-P9-QcN" id="IBd-DO-2g8"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-2P-DIJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AK-EV-9Ae">
+                                        <rect key="frame" x="321" y="7" width="38" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="done:" destination="exw-P9-QcN" eventType="touchUpInside" id="vSu-6d-ZCp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYd-D6-xF2">
+                                        <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="edit:" destination="exw-P9-QcN" eventType="touchUpInside" id="Ttc-uE-WvB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvK-1W-Cfb">
+                                        <rect key="frame" x="16" y="7" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="editDone:" destination="exw-P9-QcN" eventType="touchUpInside" id="Fig-vm-lGT"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CI-UY-8F5">
+                                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="6rw-pp-tFQ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your accounts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P23-pg-ZWj">
+                                        <rect key="frame" x="95" y="12" width="185.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0q2-eQ-ZOw"/>
+                                    <constraint firstItem="bvK-1W-Cfb" firstAttribute="leading" secondItem="N2h-2P-DIJ" secondAttribute="leading" constant="16" id="37l-w4-zIu"/>
+                                    <constraint firstItem="P23-pg-ZWj" firstAttribute="centerX" secondItem="N2h-2P-DIJ" secondAttribute="centerX" id="3JZ-e3-JXT"/>
+                                    <constraint firstItem="1AK-EV-9Ae" firstAttribute="centerY" secondItem="N2h-2P-DIJ" secondAttribute="centerY" id="4jh-0w-CjH"/>
+                                    <constraint firstItem="1CI-UY-8F5" firstAttribute="leading" secondItem="N2h-2P-DIJ" secondAttribute="leading" id="9Er-NZ-Sit"/>
+                                    <constraint firstItem="CYd-D6-xF2" firstAttribute="leading" secondItem="N2h-2P-DIJ" secondAttribute="leading" constant="16" id="9RO-oA-WdU"/>
+                                    <constraint firstAttribute="trailing" secondItem="1CI-UY-8F5" secondAttribute="trailing" id="EAf-il-PDn"/>
+                                    <constraint firstItem="CYd-D6-xF2" firstAttribute="centerY" secondItem="N2h-2P-DIJ" secondAttribute="centerY" id="P1U-Nv-cXy"/>
+                                    <constraint firstAttribute="bottom" secondItem="1CI-UY-8F5" secondAttribute="bottom" id="eyA-fy-eQC"/>
+                                    <constraint firstItem="bvK-1W-Cfb" firstAttribute="centerY" secondItem="N2h-2P-DIJ" secondAttribute="centerY" id="otZ-tC-7Ef"/>
+                                    <constraint firstAttribute="trailing" secondItem="1AK-EV-9Ae" secondAttribute="trailing" constant="16" id="qbz-Nb-lLV"/>
+                                    <constraint firstItem="P23-pg-ZWj" firstAttribute="centerY" secondItem="N2h-2P-DIJ" secondAttribute="centerY" id="twr-lT-JWM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="N2h-2P-DIJ" firstAttribute="trailing" secondItem="t28-iQ-n0h" secondAttribute="trailing" id="HQk-Zp-m0C"/>
+                            <constraint firstItem="I8i-FQ-Uej" firstAttribute="top" secondItem="N2h-2P-DIJ" secondAttribute="bottom" id="X07-32-mI9"/>
+                            <constraint firstItem="N2h-2P-DIJ" firstAttribute="top" secondItem="t28-iQ-n0h" secondAttribute="top" id="hGY-kA-8XK"/>
+                            <constraint firstItem="N2h-2P-DIJ" firstAttribute="leading" secondItem="t28-iQ-n0h" secondAttribute="leading" id="oO6-Z9-4qh"/>
+                            <constraint firstItem="I8i-FQ-Uej" firstAttribute="bottom" secondItem="t28-iQ-n0h" secondAttribute="bottom" id="sho-GH-rZL"/>
+                            <constraint firstItem="I8i-FQ-Uej" firstAttribute="trailing" secondItem="t28-iQ-n0h" secondAttribute="trailing" id="vAc-D2-xI0"/>
+                            <constraint firstItem="I8i-FQ-Uej" firstAttribute="leading" secondItem="t28-iQ-n0h" secondAttribute="leading" id="wcs-Lx-xpZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t28-iQ-n0h"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="1AK-EV-9Ae" id="DPd-6E-c93"/>
+                        <outlet property="editButton" destination="CYd-D6-xF2" id="7WW-f6-iPI"/>
+                        <outlet property="editDoneButton" destination="bvK-1W-Cfb" id="Hol-gX-Auc"/>
+                        <outlet property="tableView" destination="I8i-FQ-Uej" id="fwv-AC-Dl5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaR-h1-oaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="268.51574212893553"/>
+        </scene>
+    </scenes>
+</document>
