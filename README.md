@@ -1,6 +1,12 @@
 # iOS11-TwitterShareSample
 Twitter share sample with TwitterKit in iOS11
 
+## Requirements
+
+- Xcode 9.0
+- Swift 4.0
+- iOS 9.0 or later
+
 ## Installation
 ### 1. Install [TwitterKit](https://dev.twitter.com/twitterkit/ios/overview) via [CocoaPods](https://cocoapods.org/)
 
