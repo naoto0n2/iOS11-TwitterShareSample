@@ -3,8 +3,8 @@ Twitter share sample with TwitterKit in iOS11
 
 ## Requirements
 
-- Xcode 9.0
-- Swift 4.0
+- Xcode 9.2
+- Swift 4.0.2
 - iOS 9.0 or later
 
 ## Installation
@@ -14,7 +14,7 @@ Twitter share sample with TwitterKit in iOS11
 $ pod install
 ```
 
-### 2. Install [Realm](https://github.com/realm/realm-cocoa) and [Himotoki](https://github.com/ikesyo/Himotoki) via [Carthage](https://github.com/Carthage/Carthage)
+### 2. Install [Realm](https://github.com/realm/realm-cocoa) via [Carthage](https://github.com/Carthage/Carthage)
 
 ```
 $ carthage bootstrap --platform iOS
