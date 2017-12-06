@@ -7,14 +7,22 @@
 //
 
 import Foundation
-import Himotoki
 
-struct TwitterUser {
+struct TwitterUser: Codable {
     let id: String
     let name: String
     let screenName: String
     let profileImageURLString: String
 
+    enum CodingKeys: String, CodingKey {
+        case id = "id_str"
+        case name
+        case screenName = "screen_name"
+        case profileImageURLString = "profile_image_url_https"
+    }
+}
+
+extension TwitterUser {
     var profileImageURL: URL? {
         return URL(string: self.biggerProfileImageURLString)
     }
@@ -22,23 +30,11 @@ struct TwitterUser {
     private var biggerProfileImageURLString: String {
         return self.profileImageURLString.replacingOccurrences(of: "_normal.", with: "_bigger.", options: [.backwards])
     }
-}
 
-extension TwitterUser {
     init(_ user: EntityTwitterUser) {
         self.id = user.id
         self.name = user.name
         self.screenName = user.screenName
         self.profileImageURLString = user.imageURL
-    }
-}
-
-extension TwitterUser: Himotoki.Decodable {
-    static func decode(_ e: Extractor) throws -> TwitterUser {
-        return try TwitterUser(
-            id: e <| "id_str",
-            name: e <| "name",
-            screenName: e <| "screen_name",
-            profileImageURLString: e <| "profile_image_url_https")
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6D00A8E31F5FE70900CBCE4A /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A8E21F5FE70900CBCE4A /* TwitterUser.swift */; };
-		6D00A8E71F5FEE0700CBCE4A /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D00A8E41F5FEE0700CBCE4A /* Himotoki.framework */; };
 		6D00A8E81F5FEE0700CBCE4A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D00A8E51F5FEE0700CBCE4A /* Realm.framework */; };
 		6D00A8E91F5FEE0700CBCE4A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D00A8E61F5FEE0700CBCE4A /* RealmSwift.framework */; };
 		6D00A8EC1F5FFD9800CBCE4A /* EntityTwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00A8EB1F5FFD9800CBCE4A /* EntityTwitterUser.swift */; };
@@ -62,7 +61,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DA533BB1F57E01000B30529 /* Social.framework in Frameworks */,
-				6D00A8E71F5FEE0700CBCE4A /* Himotoki.framework in Frameworks */,
 				6D00A8E81F5FEE0700CBCE4A /* Realm.framework in Frameworks */,
 				6D00A8E91F5FEE0700CBCE4A /* RealmSwift.framework in Frameworks */,
 				79CDC2166135EEC0EAB732E9 /* Pods_TwitterShareSample.framework in Frameworks */,
@@ -264,7 +262,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);

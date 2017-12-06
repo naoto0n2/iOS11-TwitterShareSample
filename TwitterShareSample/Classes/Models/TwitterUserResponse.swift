@@ -7,15 +7,19 @@
 //
 
 import Foundation
-import Himotoki
 
-struct TwitterUserResponse {
+struct TwitterUserResponse: Codable {
     let users: [TwitterUser]
-}
 
-extension TwitterUserResponse: Himotoki.Decodable {
-    static func decode(_ e: Extractor) throws -> TwitterUserResponse {
-        let users: [TwitterUser] = try decodeArray(e.rawValue)
-        return TwitterUserResponse(users: users)
+    init(from decoder: Decoder) throws {
+        var container = try decoder.unkeyedContainer()
+
+        var users: [TwitterUser] = []
+        while !container.isAtEnd {
+            let user = try container.decode(TwitterUser.self)
+            users.append(user)
+        }
+
+        self.users = users
     }
 }

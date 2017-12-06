@@ -15,7 +15,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Twitters.shared.start(consumerKey: "yourConsumerKey", consumerSecret: "yourConsumerSecret")
+        Twitters.shared.start(consumerKey: "dBclluqOra3NpcwoKtWH7Z0ur", consumerSecret: "8Xc6wBXtHAPznI4egT4iaqE6Aa5Q5eJ9QO9f89O1DSkRqOm7TE")
         return true
     }
 
