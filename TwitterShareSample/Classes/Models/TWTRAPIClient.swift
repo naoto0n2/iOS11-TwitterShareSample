@@ -41,8 +41,8 @@ extension TWTRAPIClient {
             }
 
             do {
-                let response = try JSONDecoder().decode(TwitterUserResponse.self, from: data)
-                completion(.success(response.users))
+                let users = try JSONDecoder().decode([TwitterUser].self, from: data)
+                completion(.success(users))
             } catch {
                 completion(.failure(error))
             }
